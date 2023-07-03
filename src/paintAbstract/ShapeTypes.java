@@ -2,6 +2,6 @@ package paintAbstract;
 
 public enum ShapeTypes {
     Line, Circle, Rectangle, 
-    Triangle, Oval, Polygone, Square
+    Triangle, Oval, Polygon, Square
     
 }

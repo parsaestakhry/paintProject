@@ -2,10 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package testpaint;
+package paintAbstract.testPaint;
 
 import java.awt.Color;
+import java.awt.event.*;
 import java.util.ArrayList;
+import javax.swing.*;
+import javax.swing.GroupLayout;
+import javax.swing.LayoutStyle;
 import paintAbstract.*;
 
 /**
@@ -38,117 +42,111 @@ public class MyPaint extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // Generated using JFormDesigner Evaluation license - Parsa Es
     private void initComponents() {
+        paintPanel = new JPanel();
+        btnLine = new JButton();
+        btnRect = new JButton();
+        btnCircle = new JButton();
+        btnMove = new JButton();
+        btnErase = new JButton();
+        chbIsFill = new JCheckBox();
 
-        paintPanel = new javax.swing.JPanel();
-        btnLine = new javax.swing.JButton();
-        btnRect = new javax.swing.JButton();
-        btnCircle = new javax.swing.JButton();
-        btnMove = new javax.swing.JButton();
-        btnErase = new javax.swing.JButton();
-        chbIsFill = new javax.swing.JCheckBox();
+        //======== this ========
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        var contentPane = getContentPane();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        //======== paintPanel ========
+        {
+            paintPanel.setBackground(Color.white);
+            paintPanel.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    paintPanelMouseClicked(e);
+                }
+            });
+            paintPanel.setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder ( new javax . swing. border .EmptyBorder ( 0
+            , 0 ,0 , 0) ,  "JFor\u006dDesi\u0067ner \u0045valu\u0061tion" , javax. swing .border . TitledBorder. CENTER ,javax . swing. border .TitledBorder . BOTTOM
+            , new java. awt .Font ( "Dia\u006cog", java .awt . Font. BOLD ,12 ) ,java . awt. Color .red ) ,
+            paintPanel. getBorder () ) ); paintPanel. addPropertyChangeListener( new java. beans .PropertyChangeListener ( ){ @Override public void propertyChange (java . beans. PropertyChangeEvent e
+            ) { if( "bord\u0065r" .equals ( e. getPropertyName () ) )throw new RuntimeException( ) ;} } );
 
-        paintPanel.setBackground(new java.awt.Color(255, 255, 255));
-        paintPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                paintPanelMouseClicked(evt);
-            }
-        });
+            GroupLayout paintPanelLayout = new GroupLayout(paintPanel);
+            paintPanel.setLayout(paintPanelLayout);
+            paintPanelLayout.setHorizontalGroup(
+                paintPanelLayout.createParallelGroup()
+                    .addGap(0, 676, Short.MAX_VALUE)
+            );
+            paintPanelLayout.setVerticalGroup(
+                paintPanelLayout.createParallelGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+            );
+        }
 
-        javax.swing.GroupLayout paintPanelLayout = new javax.swing.GroupLayout(paintPanel);
-        paintPanel.setLayout(paintPanelLayout);
-        paintPanelLayout.setHorizontalGroup(
-            paintPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 676, Short.MAX_VALUE)
-        );
-        paintPanelLayout.setVerticalGroup(
-            paintPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
+        //---- btnLine ----
         btnLine.setText("Line");
-        btnLine.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLineActionPerformed(evt);
-            }
-        });
+        btnLine.addActionListener(e -> btnLineActionPerformed(e));
 
-        btnRect.setText("Rectangle");
-        btnRect.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRectActionPerformed(evt);
-            }
-        });
+        //---- btnRect ----
+        btnRect.setText("Recta");
+        btnRect.addActionListener(e -> btnRectActionPerformed(e));
 
+        //---- btnCircle ----
         btnCircle.setText("Circle");
-        btnCircle.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCircleActionPerformed(evt);
-            }
-        });
+        btnCircle.addActionListener(e -> btnCircleActionPerformed(e));
 
+        //---- btnMove ----
         btnMove.setText("Move");
-        btnMove.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMoveActionPerformed(evt);
-            }
-        });
+        btnMove.addActionListener(e -> btnMoveActionPerformed(e));
 
+        //---- btnErase ----
         btnErase.setText("Erase");
-        btnErase.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEraseActionPerformed(evt);
-            }
-        });
+        btnErase.addActionListener(e -> btnEraseActionPerformed(e));
 
+        //---- chbIsFill ----
         chbIsFill.setText("Is Filled?");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnRect)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addComponent(btnLine))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnCircle)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btnErase)
-                                .addComponent(btnMove)
-                                .addComponent(chbIsFill)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(paintPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+        contentPane.setLayout(contentPaneLayout);
+        contentPaneLayout.setHorizontalGroup(
+            contentPaneLayout.createParallelGroup()
+                .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+                    .addGroup(contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(18, 18, 18)
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                .addComponent(btnCircle)
+                                .addGroup(contentPaneLayout.createParallelGroup()
+                                    .addComponent(btnErase)
+                                    .addComponent(btnMove)
+                                    .addComponent(chbIsFill))))
+                        .addComponent(btnRect, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(btnLine)))
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(paintPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(paintPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(btnLine)
-                .addGap(18, 18, 18)
-                .addComponent(btnRect)
-                .addGap(18, 18, 18)
-                .addComponent(btnCircle)
-                .addGap(120, 120, 120)
-                .addComponent(btnMove)
-                .addGap(27, 27, 27)
-                .addComponent(btnErase)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
-                .addComponent(chbIsFill)
-                .addGap(42, 42, 42))
+        contentPaneLayout.setVerticalGroup(
+            contentPaneLayout.createParallelGroup()
+                .addComponent(paintPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGap(27, 27, 27)
+                    .addComponent(btnLine)
+                    .addGap(18, 18, 18)
+                    .addComponent(btnRect, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(btnCircle)
+                    .addGap(120, 120, 120)
+                    .addComponent(btnMove)
+                    .addGap(27, 27, 27)
+                    .addComponent(btnErase)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                    .addComponent(chbIsFill)
+                    .addGap(42, 42, 42))
         );
-
         pack();
+        setLocationRelativeTo(getOwner());
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLineActionPerformed
@@ -207,7 +205,7 @@ public class MyPaint extends javax.swing.JFrame {
                     case Triangle:
 
                         break;
-                    case Polygone:
+                    case Polygon:
 
 //                        pArr.clear();
                         break;
@@ -302,12 +300,13 @@ public class MyPaint extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCircle;
-    private javax.swing.JButton btnErase;
-    private javax.swing.JButton btnLine;
-    private javax.swing.JButton btnMove;
-    private javax.swing.JButton btnRect;
-    private javax.swing.JCheckBox chbIsFill;
-    private javax.swing.JPanel paintPanel;
+    // Generated using JFormDesigner Evaluation license - Parsa Es
+    private JPanel paintPanel;
+    private JButton btnLine;
+    private JButton btnRect;
+    private JButton btnCircle;
+    private JButton btnMove;
+    private JButton btnErase;
+    private JCheckBox chbIsFill;
     // End of variables declaration//GEN-END:variables
 }

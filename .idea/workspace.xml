@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9cbea52-7d50-49b9-8ede-2016e43424a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/paintAbstract/Oval.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/paintAbstract/Polygone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/paintAbstract/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/paintAbstract/testGraphics/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/paintAbstract/testGraphics/myFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paintAbstract/testPaint/MyPaint.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paintAbstract/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paintAbstract/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paintAbstract/Oval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/Oval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paintAbstract/PaintingArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/PaintingArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paintAbstract/Polygone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/Polygon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paintAbstract/ShapeTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/ShapeTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paintAbstract/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paintAbstract/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paintAbstract/testGraphics/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paintAbstract/testGraphics/myFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testpaint/MyPaint.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testpaint/MyPaint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/testPaint/MyPaint.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,14 +41,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "278",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "false",
+    "last_opened_file_path": "C:/Users/parsa/Desktop/AdvancedProgrammingPractice",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\parsa\Desktop\Programming\paintProject\src\paintAbstract\testPaint" />
       <recent name="C:\Users\parsa\Desktop\Programming\paintProject\src" />
       <recent name="C:\Users\parsa\Desktop\Programming\paintProject" />
     </key>

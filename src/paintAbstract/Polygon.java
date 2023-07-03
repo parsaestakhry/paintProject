@@ -2,7 +2,7 @@ package paintAbstract;
 
 import java.awt.*;
 
-public class Polygone extends Shape {
+public class Polygon extends Shape {
     @Override
     public void draw(Graphics gr) {
 

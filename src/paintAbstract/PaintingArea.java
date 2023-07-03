@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class PaintingArea {
 
     public ArrayList<Shape> shapeArr;
+
     public Graphics gr;
     public int width;
     public int height;
@@ -16,6 +17,7 @@ public class PaintingArea {
         this.gr = gr;
         this.width = width;
         this.height = height;
+
     }
 
     
@@ -68,7 +70,7 @@ public class PaintingArea {
         }
     }
     public String getStatus() {
-        int lCount = 0, cCount = 0, rCount = 0, tCount=0;
+        int lCount = 0, cCount = 0, rCount = 0, tCount=0, oCount = 0, pCount = 0;
         if (shapeArr != null) {
 
             for (Shape s : shapeArr) {
@@ -80,11 +82,16 @@ public class PaintingArea {
                     rCount++;
                 } else if (s instanceof Triangle) {
                     tCount++;
+                } else if (s instanceof Oval) {
+                    oCount ++;
+                } else if (s instanceof Polygon) {
+                    pCount ++;
                 }
             }
 
         }
 
-        return String.format("Lines:%d, Circles:%d, Rectangles:%d, Triangles:%d", lCount, cCount, rCount,tCount);
+        return String.format("Lines:%d, Circles:%d, Rectangles:%d, Triangles:%d" ,"Ovals:%d" , "Polygons:%d" ,
+                lCount, cCount, rCount,tCount , oCount , pCount);
     }
 }
