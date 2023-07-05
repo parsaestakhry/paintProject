@@ -51,6 +51,12 @@ public class MyPaint extends javax.swing.JFrame {
         btnMove = new JButton();
         btnErase = new JButton();
         chbIsFill = new JCheckBox();
+        button1 = new JButton();
+        button2 = new JButton();
+        button3 = new JButton();
+        button4 = new JButton();
+        button5 = new JButton();
+        button6 = new JButton();
 
         //======== this ========
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -65,17 +71,19 @@ public class MyPaint extends javax.swing.JFrame {
                     paintPanelMouseClicked(e);
                 }
             });
-            paintPanel.setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder ( new javax . swing. border .EmptyBorder ( 0
-            , 0 ,0 , 0) ,  "JFor\u006dDesi\u0067ner \u0045valu\u0061tion" , javax. swing .border . TitledBorder. CENTER ,javax . swing. border .TitledBorder . BOTTOM
-            , new java. awt .Font ( "Dia\u006cog", java .awt . Font. BOLD ,12 ) ,java . awt. Color .red ) ,
-            paintPanel. getBorder () ) ); paintPanel. addPropertyChangeListener( new java. beans .PropertyChangeListener ( ){ @Override public void propertyChange (java . beans. PropertyChangeEvent e
-            ) { if( "bord\u0065r" .equals ( e. getPropertyName () ) )throw new RuntimeException( ) ;} } );
+            paintPanel.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax
+            . swing. border. EmptyBorder( 0, 0, 0, 0) , "JF\u006frm\u0044es\u0069gn\u0065r \u0045va\u006cua\u0074io\u006e", javax. swing
+            . border. TitledBorder. CENTER, javax. swing. border. TitledBorder. BOTTOM, new java .awt .
+            Font ("D\u0069al\u006fg" ,java .awt .Font .BOLD ,12 ), java. awt. Color. red
+            ) ,paintPanel. getBorder( )) ); paintPanel. addPropertyChangeListener (new java. beans. PropertyChangeListener( ){ @Override
+            public void propertyChange (java .beans .PropertyChangeEvent e) {if ("\u0062or\u0064er" .equals (e .getPropertyName (
+            ) )) throw new RuntimeException( ); }} );
 
             GroupLayout paintPanelLayout = new GroupLayout(paintPanel);
             paintPanel.setLayout(paintPanelLayout);
             paintPanelLayout.setHorizontalGroup(
                 paintPanelLayout.createParallelGroup()
-                    .addGap(0, 676, Short.MAX_VALUE)
+                    .addGap(0, 688, Short.MAX_VALUE)
             );
             paintPanelLayout.setVerticalGroup(
                 paintPanelLayout.createParallelGroup()
@@ -88,7 +96,7 @@ public class MyPaint extends javax.swing.JFrame {
         btnLine.addActionListener(e -> btnLineActionPerformed(e));
 
         //---- btnRect ----
-        btnRect.setText("Recta");
+        btnRect.setText("Rectangle");
         btnRect.addActionListener(e -> btnRectActionPerformed(e));
 
         //---- btnCircle ----
@@ -106,44 +114,75 @@ public class MyPaint extends javax.swing.JFrame {
         //---- chbIsFill ----
         chbIsFill.setText("Is Filled?");
 
+        //---- button1 ----
+        button1.setText("Triangle");
+
+        //---- button2 ----
+        button2.setText("Oval");
+
+        //---- button3 ----
+        button3.setText("Polygon");
+
+        //---- button4 ----
+        button4.setText("Square");
+
+        //---- button5 ----
+        button5.setText("zoomOut");
+
+        //---- button6 ----
+        button6.setText("zoomIn");
+
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+                    .addContainerGap()
                     .addGroup(contentPaneLayout.createParallelGroup()
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(18, 18, 18)
-                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                .addComponent(btnCircle)
-                                .addGroup(contentPaneLayout.createParallelGroup()
-                                    .addComponent(btnErase)
-                                    .addComponent(btnMove)
-                                    .addComponent(chbIsFill))))
-                        .addComponent(btnRect, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(btnLine)))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(paintPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnLine)
+                        .addComponent(btnRect, GroupLayout.PREFERRED_SIZE, 78, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnCircle)
+                        .addComponent(btnMove)
+                        .addComponent(chbIsFill)
+                        .addComponent(btnErase)
+                        .addComponent(button1)
+                        .addComponent(button2)
+                        .addComponent(button3)
+                        .addComponent(button4)
+                        .addComponent(button5)
+                        .addComponent(button6))
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(paintPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
-                .addComponent(paintPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(27, 27, 27)
+                    .addContainerGap()
                     .addComponent(btnLine)
-                    .addGap(18, 18, 18)
-                    .addComponent(btnRect, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(btnRect)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(btnCircle)
-                    .addGap(120, 120, 120)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(button1)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(button2)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(button3)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(button4)
+                    .addGap(30, 30, 30)
+                    .addComponent(button6)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(button5)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(btnMove)
-                    .addGap(27, 27, 27)
+                    .addGap(18, 18, 18)
                     .addComponent(btnErase)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(chbIsFill)
-                    .addGap(42, 42, 42))
+                    .addGap(47, 47, 47))
+                .addComponent(paintPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -308,5 +347,11 @@ public class MyPaint extends javax.swing.JFrame {
     private JButton btnMove;
     private JButton btnErase;
     private JCheckBox chbIsFill;
+    private JButton button1;
+    private JButton button2;
+    private JButton button3;
+    private JButton button4;
+    private JButton button5;
+    private JButton button6;
     // End of variables declaration//GEN-END:variables
 }

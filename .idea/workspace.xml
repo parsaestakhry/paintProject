@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9cbea52-7d50-49b9-8ede-2016e43424a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/paintAbstract/testPaint/MyPaint.jfd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paintAbstract/Oval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/Oval.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paintAbstract/PaintingArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/PaintingArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paintAbstract/Polygone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/Polygon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paintAbstract/ShapeTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/ShapeTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paintAbstract/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paintAbstract/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paintAbstract/testGraphics/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paintAbstract/testGraphics/myFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testpaint/MyPaint.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testpaint/MyPaint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/testPaint/MyPaint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paintAbstract/testPaint/MyPaint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/testPaint/MyPaint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paintAbstract/testPaint/MyPaint.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/paintAbstract/testPaint/MyPaint.jfd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +20,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -47,7 +41,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "278",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "false",
-    "last_opened_file_path": "C:/Users/parsa/Desktop/AdvancedProgrammingPractice",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/parsa/Desktop/Programming/APC214020324",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
