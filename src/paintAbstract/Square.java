@@ -24,7 +24,7 @@ public class Square extends Shape {
         setPoints();
         if (isFilled){
            gr.setColor(fillColor);
-           gr.drawRect(p1.getX(), p1.getY(), p2.getY() - p1.getY() , p2.getX() - p1.getX());
+           gr.fillRect(p1.getX(), p1.getY(), p2.getY() - p1.getY() , p2.getX() - p1.getX());
         }
         else {
             gr.setColor(borderColor);

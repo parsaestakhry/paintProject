@@ -32,7 +32,7 @@ public class Triangle extends Shape {
     public void draw(Graphics gr) {
         if (isFilled){
             gr.setColor(fillColor);
-            gr.drawPolygon(new int[] {p1.getX() , p2.getX() , p3.getX()} , new int[] {p1.getY() , p2.getY() , p3.getY()} , 3);
+            gr.fillPolygon(new int[] {p1.getX() , p2.getX() , p3.getX()} , new int[] {p1.getY() , p2.getY() , p3.getY()} , 3);
         }
         else {
             gr.setColor(borderColor);

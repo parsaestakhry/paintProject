@@ -42,7 +42,7 @@ public class Line extends Shape{
         System.out.println(name + " Deleted.");
     }
 
-    public boolean hit(Point p) {
+    public boolean hit(Point p)  {
         return p1.distance(p2) == p1.distance(p) + p2.distance(p);
     }
 }

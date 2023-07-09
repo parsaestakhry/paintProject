@@ -7,6 +7,7 @@ package paintAbstract.testPaint;
 import java.awt.Color;
 import java.awt.event.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle;
@@ -17,7 +18,7 @@ import paintAbstract.*;
  * @author Sajjad
  */
 public class MyPaint extends javax.swing.JFrame {
-
+    Point[] pointArray = new Point[1];
     ShapeTypes curShape = ShapeTypes.Line;
     ActionType curAction = ActionType.Draw;
     Color curBorderColor = Color.MAGENTA;
@@ -29,10 +30,109 @@ public class MyPaint extends javax.swing.JFrame {
     /**
      * Creates new form MyPaint
      */
+
+
+
+
+    private void btnOvalActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        curAction = ActionType.Draw;
+        curShape = ShapeTypes.Oval;
+        p1 = p2 = p3 = null;
+        pArr.clear();
+    }
+
+    private void triangle(ActionEvent e) {
+        // TODO add your code here
+        curAction = ActionType.Draw;
+        curShape = ShapeTypes.Triangle;
+        p1 = p2 = p3 = null;
+        pArr.clear();
+    }
+
+    private void poly(ActionEvent e) {
+        // TODO add your code here
+        curAction = ActionType.Draw;
+        curShape = ShapeTypes.Polygon;
+        p1 = p2 = p3 = null;
+        pArr.clear();
+    }
+
+    private void square(ActionEvent e) {
+        // TODO add your code here
+        curAction = ActionType.Draw;
+        curShape = ShapeTypes.Square;
+        p1 = p2 = p3 = null;
+        pArr.clear();
+    }
+
+    private void zoomIn(ActionEvent e) {
+        curAction = ActionType.ZoomIn;
+        p1 = p2 = p3 = null;
+        pArr.clear();
+    }
+
+    private void zoomOut(ActionEvent e) {
+        // TODO add your code here
+        curAction = ActionType.ZoomOut;
+        p1 = p2 = p3 = null;
+        pArr.clear();
+    }
+
+    private void radioButtonBLUE(ActionEvent e) {
+        // TODO add your code here
+        if (chbIsFill.isSelected()) {
+            curFillColor = new Color(0 , 0 , 255);
+        } else {
+            curBorderColor = new Color(0, 0, 255);
+        }
+    }
+
+    private void radioButton2RED(ActionEvent e) {
+        // TODO add your code here
+        if (chbIsFill.isSelected()){
+            curFillColor = new Color(255 , 0 , 0);
+        } else {
+            curBorderColor = new Color(255 , 0 , 0);
+        }
+    }
+
+    private void radioButton3GREEN(ActionEvent e) {
+        // TODO add your code here
+        if (chbIsFill.isSelected()){
+            curFillColor = new Color(0 , 255 , 0);
+        } else {
+            curBorderColor = new Color(0 , 255 , 0);
+        }
+    }
+
+    private void radioButton4BLUE(ActionEvent e) {
+        // TODO add your code here
+        this.curBorderColor = null;
+        this.curFillColor = null;
+        if (chbIsFill.isSelected()){
+            curFillColor = new Color(25);
+        } else {
+            curBorderColor = new Color(25);
+        }
+    }
+
+    private void radioButton5YELLOW(ActionEvent e) {
+        // TODO add your code here
+        if (chbIsFill.isSelected()){
+            curFillColor = new Color(255 , 255 , 0);
+        } else {
+            curBorderColor = new Color(255 , 255 , 0);
+        }
+    }
+
+
+
     public MyPaint() {
         initComponents();
         myArea = new PaintingArea(paintPanel.getGraphics(), paintPanel.getWidth(), paintPanel.getHeight());
         pArr = new ArrayList();
+
     }
 
     /**
@@ -51,12 +151,17 @@ public class MyPaint extends javax.swing.JFrame {
         btnMove = new JButton();
         btnErase = new JButton();
         chbIsFill = new JCheckBox();
-        button1 = new JButton();
-        button2 = new JButton();
-        button3 = new JButton();
-        button4 = new JButton();
-        button5 = new JButton();
-        button6 = new JButton();
+        triangleButton = new JButton();
+        polyButton = new JButton();
+        squareButton = new JButton();
+        zoomOutButton = new JButton();
+        zoomInButton = new JButton();
+        ovalButton = new JButton();
+        radioButton1 = new JRadioButton();
+        radioButton2 = new JRadioButton();
+        radioButton3 = new JRadioButton();
+        radioButton4 = new JRadioButton();
+        radioButton5 = new JRadioButton();
 
         //======== this ========
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -71,19 +176,18 @@ public class MyPaint extends javax.swing.JFrame {
                     paintPanelMouseClicked(e);
                 }
             });
-            paintPanel.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax
-            . swing. border. EmptyBorder( 0, 0, 0, 0) , "JF\u006frm\u0044es\u0069gn\u0065r \u0045va\u006cua\u0074io\u006e", javax. swing
-            . border. TitledBorder. CENTER, javax. swing. border. TitledBorder. BOTTOM, new java .awt .
-            Font ("D\u0069al\u006fg" ,java .awt .Font .BOLD ,12 ), java. awt. Color. red
-            ) ,paintPanel. getBorder( )) ); paintPanel. addPropertyChangeListener (new java. beans. PropertyChangeListener( ){ @Override
-            public void propertyChange (java .beans .PropertyChangeEvent e) {if ("\u0062or\u0064er" .equals (e .getPropertyName (
-            ) )) throw new RuntimeException( ); }} );
+            paintPanel.setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder ( new javax . swing. border
+            .EmptyBorder ( 0, 0 ,0 , 0) ,  "JF\u006frmD\u0065sig\u006eer \u0045val\u0075ati\u006fn" , javax. swing .border . TitledBorder. CENTER ,javax
+            . swing. border .TitledBorder . BOTTOM, new java. awt .Font ( "Dia\u006cog", java .awt . Font. BOLD ,
+            12 ) ,java . awt. Color .red ) ,paintPanel. getBorder () ) ); paintPanel. addPropertyChangeListener( new java. beans
+            .PropertyChangeListener ( ){ @Override public void propertyChange (java . beans. PropertyChangeEvent e) { if( "\u0062ord\u0065r" .equals ( e.
+            getPropertyName () ) )throw new RuntimeException( ) ;} } );
 
             GroupLayout paintPanelLayout = new GroupLayout(paintPanel);
             paintPanel.setLayout(paintPanelLayout);
             paintPanelLayout.setHorizontalGroup(
                 paintPanelLayout.createParallelGroup()
-                    .addGap(0, 688, Short.MAX_VALUE)
+                    .addGap(0, 665, Short.MAX_VALUE)
             );
             paintPanelLayout.setVerticalGroup(
                 paintPanelLayout.createParallelGroup()
@@ -114,23 +218,49 @@ public class MyPaint extends javax.swing.JFrame {
         //---- chbIsFill ----
         chbIsFill.setText("Is Filled?");
 
-        //---- button1 ----
-        button1.setText("Triangle");
+        //---- triangleButton ----
+        triangleButton.setText("Triangle");
+        triangleButton.addActionListener(e -> triangle(e));
 
-        //---- button2 ----
-        button2.setText("Oval");
+        //---- polyButton ----
+        polyButton.setText("Polygon");
+        polyButton.addActionListener(e -> poly(e));
 
-        //---- button3 ----
-        button3.setText("Polygon");
+        //---- squareButton ----
+        squareButton.setText("Square");
+        squareButton.addActionListener(e -> square(e));
 
-        //---- button4 ----
-        button4.setText("Square");
+        //---- zoomOutButton ----
+        zoomOutButton.setText("zoomOut");
+        zoomOutButton.addActionListener(e -> zoomOut(e));
 
-        //---- button5 ----
-        button5.setText("zoomOut");
+        //---- zoomInButton ----
+        zoomInButton.setText("zoomIn");
+        zoomInButton.addActionListener(e -> zoomIn(e));
 
-        //---- button6 ----
-        button6.setText("zoomIn");
+        //---- ovalButton ----
+        ovalButton.setText("Oval");
+        ovalButton.addActionListener(e -> btnOvalActionPerformed(e));
+
+        //---- radioButton1 ----
+        radioButton1.setText("BLUE");
+        radioButton1.addActionListener(e -> radioButtonBLUE(e));
+
+        //---- radioButton2 ----
+        radioButton2.setText("RED");
+        radioButton2.addActionListener(e -> radioButton2RED(e));
+
+        //---- radioButton3 ----
+        radioButton3.setText("GREEN");
+        radioButton3.addActionListener(e -> radioButton3GREEN(e));
+
+        //---- radioButton4 ----
+        radioButton4.setText("BLACK");
+        radioButton4.addActionListener(e -> radioButton4BLUE(e));
+
+        //---- radioButton5 ----
+        radioButton5.setText("YELLOW");
+        radioButton5.addActionListener(e -> radioButton5YELLOW(e));
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
@@ -139,20 +269,28 @@ public class MyPaint extends javax.swing.JFrame {
                 .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
                     .addContainerGap()
                     .addGroup(contentPaneLayout.createParallelGroup()
-                        .addComponent(btnLine)
-                        .addComponent(btnRect, GroupLayout.PREFERRED_SIZE, 78, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnCircle)
-                        .addComponent(btnMove)
-                        .addComponent(chbIsFill)
-                        .addComponent(btnErase)
-                        .addComponent(button1)
-                        .addComponent(button2)
-                        .addComponent(button3)
-                        .addComponent(button4)
-                        .addComponent(button5)
-                        .addComponent(button6))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(paintPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                            .addComponent(triangleButton, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(chbIsFill)
+                            .addComponent(btnErase)
+                            .addComponent(btnMove)
+                            .addComponent(zoomOutButton, GroupLayout.PREFERRED_SIZE, 78, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ovalButton, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCircle, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnRect, GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(btnLine, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(zoomInButton))
+                        .addComponent(polyButton)
+                        .addComponent(squareButton, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(radioButton1)
+                        .addComponent(radioButton2)
+                        .addComponent(radioButton3)
+                        .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(radioButton5, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(radioButton4, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGap(53, 53, 53)
+                    .addComponent(paintPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(80, 80, 80))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
@@ -164,24 +302,34 @@ public class MyPaint extends javax.swing.JFrame {
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(btnCircle)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(button1)
+                    .addComponent(triangleButton)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(button2)
+                    .addComponent(ovalButton)
+                    .addGap(10, 10, 10)
+                    .addComponent(polyButton)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(button3)
+                    .addComponent(squareButton)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(button4)
-                    .addGap(30, 30, 30)
-                    .addComponent(button6)
+                    .addComponent(radioButton1)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(radioButton2)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(button5)
+                    .addComponent(radioButton3)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(radioButton4)
+                    .addGap(3, 3, 3)
+                    .addComponent(radioButton5, GroupLayout.PREFERRED_SIZE, 21, GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(zoomInButton)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(zoomOutButton)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(btnMove)
-                    .addGap(18, 18, 18)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(btnErase)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(chbIsFill)
-                    .addGap(47, 47, 47))
+                    .addGap(16, 16, 16))
                 .addComponent(paintPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pack();
@@ -200,13 +348,13 @@ public class MyPaint extends javax.swing.JFrame {
             case Draw:
                 switch (curShape) {
                     case Line:
+                        // if mouse hasn't been clicked yet
                         if (p1 == null) {
                             p1 = new Point(evt.getX(), evt.getY());
                         } else {
                             p2 = new Point(evt.getX(), evt.getY());
                             Line l = new Line(p1, p2, curBorderColor);
                             myArea.addShape(l);
-
                             p1 = p2 = null;
                         }
                         break;
@@ -236,17 +384,57 @@ public class MyPaint extends javax.swing.JFrame {
                         break;
 
                     case Square:
+                        if (p1 == null){
+                            p1 = new Point(evt.getX(), evt.getY());
+                        } else {
+                            p2 = new Point(evt.getX(), evt.getY());
+                            Square square = new Square(p1 , p2 , curBorderColor, curFillColor );
+                            square.isFilled = chbIsFill.isSelected();
+                            myArea.addShape(square);
+                            p1 = p2 = null;
+                        }
 
                         break;
                     case Oval:
+                        if (p1 == null){
+                            p1 = new Point(evt.getX(), evt.getY());
+                        } else {
+                            p2 = new Point(evt.getX(), evt.getY());
+                            Oval oval = new Oval(p1 , p2 , Math.abs(p2.getY() - p1.getY()), Math.abs(p2.getX() - p1.getX()), curBorderColor , curFillColor );
+                            oval.isFilled = chbIsFill.isSelected();
+                            myArea.addShape(oval);
+                            p1 = p2 = null;
+                        }
 
                         break;
                     case Triangle:
+                        if (p1 == null){
+                            p1 = new Point(evt.getX(), evt.getY());
+                        } else if (p2 == null) {
+                            p2 = new Point(evt.getX(), evt.getY());
+                        } else {
+                            p3 = new Point(evt.getX(), evt.getY());
+                            Triangle triangle = new Triangle(p1 , p2 , p3 , curBorderColor, curFillColor);
+                            triangle.isFilled = chbIsFill.isSelected();
+                            myArea.addShape(triangle);
+                            p1 = p2 = p3 = null;
+                        }
 
                         break;
                     case Polygon:
+                        if (pointArray[pointArray.length - 1] == null){
+                            pointArray[pointArray.length - 1]  = new Point(evt.getX() , evt.getY());
+                            pointArray = Arrays.copyOf(pointArray, pointArray.length + 1);
+                        } if (evt.getClickCount() == 2) {
+                            pointArray = Arrays.copyOf(pointArray, pointArray.length - 1);
+                            Polygon polygon = new Polygon(pointArray , curBorderColor , curFillColor);
+                            polygon.isFilled = chbIsFill.isSelected();
+                            myArea.addShape(polygon);
+                            pointArray = new Point[1];
 
-//                        pArr.clear();
+                        }
+
+//                        pArr.clear()  ;
                         break;
                 }
                 break;
@@ -347,11 +535,16 @@ public class MyPaint extends javax.swing.JFrame {
     private JButton btnMove;
     private JButton btnErase;
     private JCheckBox chbIsFill;
-    private JButton button1;
-    private JButton button2;
-    private JButton button3;
-    private JButton button4;
-    private JButton button5;
-    private JButton button6;
+    private JButton triangleButton;
+    private JButton polyButton;
+    private JButton squareButton;
+    private JButton zoomOutButton;
+    private JButton zoomInButton;
+    private JButton ovalButton;
+    private JRadioButton radioButton1;
+    private JRadioButton radioButton2;
+    private JRadioButton radioButton3;
+    private JRadioButton radioButton4;
+    private JRadioButton radioButton5;
     // End of variables declaration//GEN-END:variables
 }
